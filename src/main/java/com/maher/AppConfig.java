@@ -14,6 +14,6 @@ public class AppConfig {
 
     @Bean
     GitHub gitHub() throws IOException {
-        return GitHub.connectAnonymously();
+        return GitHub.connectUsingOAuth("b922102f3d486dc5de4166b646d23dff3ffcdec3");
     }
 }

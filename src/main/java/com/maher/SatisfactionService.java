@@ -10,8 +10,8 @@ import java.util.List;
 @Component
 public class SatisfactionService {
 
-    EmailService emailService;
-    GitHub gitHub;
+    private final EmailService emailService;
+    private final GitHub gitHub;
      List<GHUser> members;
 
     public SatisfactionService(EmailService emailService, GitHub gitHub) {
@@ -31,7 +31,7 @@ public class SatisfactionService {
     public void satisfy() throws IOException {
         fetchUsers();
         for (GHUser member : members){
-            System.out.println(emailService.sendEmail(member.getName()));
+            System.out.println(emailService.sendEmail(member.getLogin()));
         }
     }
 }

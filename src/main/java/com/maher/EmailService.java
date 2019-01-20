@@ -5,6 +5,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class EmailService {
 
+    /**
+     * here we write Documentation and it will be showed as HTML
+     *
+     */
     GreetingsService greetingsService;
 
     public EmailService(GreetingsService greetingsService) {
@@ -14,7 +18,7 @@ public class EmailService {
 
 
     public String sendEmail(String name){
-        return greetingsService.greet(name) + "how do you like Redi School";
+        return greetingsService.greet(name) + ": how do you like Redi School";
     }
 
 

@@ -9,8 +9,9 @@ public class App {
 
     public static void main(String[] args) throws IOException {
         ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        SatisfactionService satisfactionService1 = context.getBean(SatisfactionService.class);
+        SatisfactionService2 satisfactionService1 = context.getBean(SatisfactionService2.class);
         satisfactionService1.satisfy();
+
 
     }
 }
